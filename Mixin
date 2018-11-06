@@ -34,5 +34,32 @@ peter.jump
 jiminy.jump
 
 
+#second example
+
+module MartialArts
+  def swordsman
+    puts "I'm a swordsman."
+  end  
+end
+
+class Ninja
+  include MartialArts
+  def initialize(clan)
+    @clan = clan
+  end
+end
+
+class Samurai
+  include MartialArts
+  def initialize(shogun)
+    @shogun = shogun
+  end
+end
+
+peter = Ninja.new("Peter")
+jiminy = Samurai.new("Jiminy")
+
+peter.swordsman
+jiminy.swordsman
 
 #mixed together the behaviors of a class and a module!
